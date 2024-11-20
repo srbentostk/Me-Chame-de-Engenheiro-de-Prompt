@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Prompt Dominado</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px 20px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 25px;
+            height: 0;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1em;
+        }
+
+        .submit-btn {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .features, .testimonials, .course-outline {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+
+        .features h2, .testimonials h2, .course-outline h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #333;
+            text-align: center;
+        }
+
+        .feature-item, .testimonial-item {
+            margin-bottom: 15px;
+        }
+
+        .feature-item p, .testimonial-item p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .form-container, .features, .testimonials, .course-outline {
+                padding: 20px;
+            }
+
+            .submit-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Projeto Prompt Dominado</h1>
+            <p>Um computador com acesso ao ChatGPT</p>
+            <p>É tudo que você precisa para aprender</p>
+            <p>como transformar seu chatGPT em uma:</p>
+            <h3>MÁQUINA DE PRODUTIVIDADE</h3>
+
+        </header>
+
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID?autoplay=1&mute=1" 
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="form-container">
+            <h2>Digite o seu e-mail abaixo e garanta vaga no Projeto Prompt Dominado que te mostrará como é possível usar IA para não ter que trabalhar enquanto eles dormem:</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Whatsapp com DDD</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <button type="submit" class="submit-btn">Quero Aprender Mais!</button>
+            </form>
+        </div>
+
+        <div class="features">
+            <h2>O Que Você Vai Aprender</h2>
+            <div class="feature-item">
+                <p><strong>Módulo 1:</strong> Introdução ao ChatGPT e Prompt Engineering</p>
+            </div>
+            <div class="feature-item">
+                <p><strong>Módulo 2:</strong> Estruturação de Prompts Eficazes</p>
+            </div>
+            <div class="feature-item">
+                <p><strong>Módulo 3:</strong> Técnicas Avançadas de Prompt Engineering</p>
+            </div>
+            <div class="feature-item">
+                <p><strong>Módulo 4:</strong> Aplicações Práticas por Setor</p>
+            </div>
+            <div class="feature-item">
+                <p><strong>Módulo 5:</strong> Avaliação e Melhoria Contínua</p>
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h2>Já Cometeu Esses Erros?</h2>
+            <div class="testimonial-item">
+                <p>❌ Utilizar prompts vagos que resultam em respostas irrelevantes.</p>
+            </div>
+            <div class="testimonial-item">
+                <p>❌ Não estruturar corretamente o contexto, levando a respostas confusas.</p>
+            </div>
+            <div class="testimonial-item">
+                <p>❌ Falta de clareza e especificidade nos comandos, aumentando os erros.</p>
+            </div>
+            <p>Se você se identificou com algum desses erros, junte-se à nossa lista de espera e descubra como corrigir esses problemas!</p>
+        </div>
+
+        <div class="course-outline">
+            <h2>Benefícios para Pequenos Negócios</h2>
+            <p>Este curso é ideal para empreendedores que desejam aumentar o lucro sem a necessidade de contratar mais funcionários. Aprende a:</p>
+            <ul>
+                <li>Qualificar e capacitar seus funcionários para produzir mais em menos tempo.</li>
+                <li>Automatizar tarefas repetitivas, economizando tempo e esforço.</li>
+                <li>Melhorar a comunicação com clientes através de respostas mais eficazes.</li>
+            </ul>
+        </div>
+
+        <div class="form-container">
+            <h2>Entre em Contato Conosco</h2>
+            <p>Ao se inscrever, você fará parte da lista de espera e será contatado nas próximas semanas para conversarmos sobre suas necessidades e como podemos ajudar a resolver suas dores. Prometemos que valerá a pena!</p>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>
