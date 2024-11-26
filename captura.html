@@ -15,9 +15,11 @@
     <div class="container">
         <div class="main-content">
             <div class="video-container">
-                <iframe id="youtube-video" src="https://www.youtube.com/embed/gxKbtvA08bY?autoplay=1&mute=1" frameborder="0"
-                    allow="autoplay; encrypted-media" allowfullscreen>
+                <iframe id="youtube-video"
+                    src="https://www.youtube.com/embed/gxKbtvA08bY?autoplay=1&mute=1&controls=1&modestbranding=1&rel=0&fs=0&cc_load_policy=0&iv_load_policy=3"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
                 </iframe>
+
             </div>
             <div class="header-content">
                 <header>
@@ -53,17 +55,18 @@
                         <div class="phone-input">
                             <span id="country-flag">🇧🇷</span>
                             <input type="tel" id="ddi" name="ddi" placeholder="+55" required>
-                            
+
                             <input type="tel" id="telefone" name="telefone" placeholder="Seu número" required>
                         </div>
                     </div>
-                    
+
                     <button type="submit" class="submit-btn">Enviar</button>
                 </form>
-                <p class="info-text">Importante: O endereço de e-mail e WhatsApp informado deve ser válido para que eu possa entrar em contato com você.</p>
+                <p class="info-text">Importante: O endereço de e-mail e WhatsApp informado deve ser válido para que eu
+                    possa entrar em contato com você.</p>
             </div>
         </div>
-        
+
     </div>
 
 
@@ -93,6 +96,20 @@
             <p>❌ Utilizar prompts vagos que resultam em respostas irrelevantes.</p>
         </div>
         <div class="testimonial-item">
+            <p>❌ Tentar fazer código sem engenharia de prompt, e perder mais tempo corrigindo bug que escrevendo código.
+            </p>
+        </div>
+        <div class="testimonial-item">
+            <p>❌ Gerou códigos com bibliotecas que não existem, ou código defasado com parâmetros que não existem.</p>
+        </div>
+        <div class="testimonial-item">
+            <p>❌ Pediu pro chat escrever um texto e obteve um resultado cheio de delírios e informações falsas.</p>
+        </div>
+        <div class="testimonial-item">
+            <p>❌ Escreveu um e-mail, mas a mensagem ficou robotizada demais, ou simplesmente não parecia um humano, não
+                parecia com você.</p>
+        </div>
+        <div class="testimonial-item">
             <p>❌ Não estruturar corretamente o contexto, levando a respostas confusas.</p>
         </div>
         <div class="testimonial-item">
@@ -103,13 +120,34 @@
     </div>
 
     <div class="course-outline">
-        <h2>Benefícios para Pequenos Negócios</h2>
-        <p>Este curso é ideal para empreendedores que desejam aumentar o lucro sem a necessidade de contratar mais
+        <h2>Benefícios para Pessoas e Pequenos Negócios</h2>
+        <p>Aprender Prompt Engineering te ajuda a aumentar a eficiência e a produtividade, obtendo um resultado como
+            você deseja, sem delírios, sem alucinações, e realmente funcional.</p>
+        <p>Este curso também é ideal para pequenos e médios empreendedores que desejam aumentar o lucro sem a
+            necessidade de contratar mais
             funcionários. Aprende a:</p>
         <ul>
+            <li>Gerar códigos sem alucinações, com poucas chances de bugs.</li>
+            <li>Reduzir significativamente o tempo de correção e refatoração de códigos.</li>
+            <li>Escrever e-mails corretos e com um tom parecido com o seu tom natural.</li>
+            <li>Fazer pesquisa do modo mais eficaz possível, reduzindo o tempo gasto para encontrar o resultado que
+                precisa.</li>
+            <li>Criar ferramentas que você nunca imaginou ser possível antes.</li>
+            <li>Criar um professor disponível 24/7 para te ensinar basicamente qualquer coisa.</li>
+            <li>Criar um assistente para te ajudar em qualquer tarefa com respostas de qualidade.</li>
+            <li>Aumentar a eficiência e produtividade dos seus funcionários.</li>
+            <li>Diminuir a perda de clientes por demora na resposta, ou resposta com má qualidade.</li>
             <li>Qualificar e capacitar seus funcionários para produzir mais em menos tempo.</li>
             <li>Automatizar tarefas repetitivas, economizando tempo e esforço.</li>
             <li>Melhorar a comunicação com clientes através de respostas mais eficazes.</li>
+        </ul>
+        <p>Usos comuns que iremos abordar:</p>
+        <ul>
+            <li>Geração de Ideias e Brainstorming</li>
+            <li>Redação de Textos e Artigos</li>
+            <li>Apoio em Programação e Debugging</li>
+            <li>Tradução e Parafraseamento</li>
+            <li>Criação de Roteiros e Scripts</li>
         </ul>
     </div>
 
@@ -124,72 +162,72 @@
     </footer>
     </div>
     <script>
-// Função de inicialização da API do YouTube
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        // Função de inicialização da API do YouTube
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var player;
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('youtube-video', {
-        events: {
-            'onStateChange': onPlayerStateChange
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-video', {
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
         }
-    });
-}
 
-function onPlayerStateChange(event) {
-    if(event.data === YT.PlayerState.ENDED) {
-        document.getElementById('cadastro-btn').classList.add('glow-effect');
-    }
-}
+        function onPlayerStateChange(event) {
+            if (event.data === YT.PlayerState.ENDED) {
+                document.getElementById('cadastro-btn').classList.add('glow-effect');
+            }
+        }
 
-// Função para abrir o popup
-function openPopup() {
-    document.getElementById('popup-overlay').classList.remove('hidden');
-}
+        // Função para abrir o popup
+        function openPopup() {
+            document.getElementById('popup-overlay').classList.remove('hidden');
+        }
 
-// Evento para o botão de cadastro
-document.getElementById('cadastro-btn').addEventListener('click', openPopup);
+        // Evento para o botão de cadastro
+        document.getElementById('cadastro-btn').addEventListener('click', openPopup);
 
-// Função para fechar o popup
-function closePopup() {
-    document.getElementById('popup-overlay').classList.add('hidden');
-}
+        // Função para fechar o popup
+        function closePopup() {
+            document.getElementById('popup-overlay').classList.add('hidden');
+        }
 
-// Evento para o botão de fechar no popup
-document.querySelector('.close-btn').addEventListener('click', closePopup);
+        // Evento para o botão de fechar no popup
+        document.querySelector('.close-btn').addEventListener('click', closePopup);
 
-// Fechar o popup ao clicar fora dele
-document.getElementById('popup-overlay').addEventListener('click', function(e) {
-    if (e.target == this) {
-        closePopup();
-    }
-});
+        // Fechar o popup ao clicar fora dele
+        document.getElementById('popup-overlay').addEventListener('click', function (e) {
+            if (e.target == this) {
+                closePopup();
+            }
+        });
 
-// Função para atualizar a bandeira ao alterar o DDI
-const ddiInput = document.getElementById('ddi');
-const countryFlag = document.getElementById('country-flag');
+        // Função para atualizar a bandeira ao alterar o DDI
+        const ddiInput = document.getElementById('ddi');
+        const countryFlag = document.getElementById('country-flag');
 
-const ddiToFlag = {
-    '55': '🇧🇷',
-    '1': '🇺🇸',
-    '54': '🇦🇷',
-    // Adicione outros DDIs conforme necessário
-};
+        const ddiToFlag = {
+            '55': '🇧🇷',
+            '1': '🇺🇸',
+            '54': '🇦🇷',
+            // Adicione outros DDIs conforme necessário
+        };
 
-ddiInput.addEventListener('input', function() {
-    const ddi = this.value.replace(/\D/g, '');
-    countryFlag.textContent = ddiToFlag[ddi] || '🌐';
-});
+        ddiInput.addEventListener('input', function () {
+            const ddi = this.value.replace(/\D/g, '');
+            countryFlag.textContent = ddiToFlag[ddi] || '🌐';
+        });
 
-            
-            </script>
-            
-        
-    
-    
+
+    </script>
+
+
+
+
 </body>
 
 </html>

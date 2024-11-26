@@ -2,12 +2,12 @@ body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
             background-image: url('sua-imagem-4k.jpg');
-            background-color: #3a3939;
+            background-color: #000000;
             color: #333;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1080px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -24,20 +24,23 @@ body {
 
         header p {
             font-size: 1.2em;
-            color: #666;
+            color: #bbbbbb;
         }
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%;
-            height: auto;
-            width: 800px;
+            padding-bottom: 50%; /* Mantém a proporção 16:9 */
+            
             margin-bottom: 40px;
             border-radius: 15px;
             overflow: hidden;
+            flex: 1; /* Permite que o contêiner se expanda dentro do flex */
+            max-width: 100%; /* Garante que não ultrapasse a largura disponível */
         }
+        
 
-        .video-container iframe, .video-container video {
+        .video-container iframe,
+        .video-container video {
             position: absolute;
             top: 0;
             left: 0;
@@ -45,8 +48,9 @@ body {
             height: 100%;
         }
 
+
         .form-container {
-            background-color: #5c5a5a;
+            background-color: #cacaca;
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -56,7 +60,8 @@ body {
         .form-container h2 {
             margin-bottom: 20px;
             font-size: 1.8em;
-            color: #333;
+            
+            color: #000000;
         }
 
         .form-group {
@@ -152,12 +157,17 @@ body {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            justify-content: center; /* Opcional: centraliza os itens */
         }
-
-        .video-container, .header-content {
-            flex: 1 1 40%;
-            min-width: auto;
+        
+        .video-container,
+        .header-content {
+            flex: 1 1 45%; /* Ocupa até 45% da largura disponível */
+            min-width: 300px; /* Define uma largura mínima para evitar que encolha demais */
+            box-sizing: border-box; /* Inclui padding e borda na largura total */
+            margin: 10px; /* Espaçamento entre os elementos */
         }
+        
 
         .header-content {
             background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
