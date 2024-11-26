@@ -1,308 +1,361 @@
 body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-image: url('sua-imagem-4k.jpg');
-            background-color: #000000;
-            color: #333;
-        }
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('sua-imagem-4k.jpg');
+    background-color: #000000;
+    color: #333;
+}
 
-        .container {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        header {
-            text-align: center;
-            padding: 50px 20px 20px 20px;
-        }
+header {
+    text-align: center;
+    padding: 50px 20px 20px 20px;
+}
 
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
 
-        header p {
-            font-size: 1.2em;
-            color: #bbbbbb;
-        }
+header p {
+    font-size: 1.2em;
+    color: #bbbbbb;
+}
 
-        .video-container {
-            position: relative;
-            padding-bottom: 50%; /* Mantém a proporção 16:9 */
-            
-            margin-bottom: 40px;
-            border-radius: 15px;
-            overflow: hidden;
-            flex: 1; /* Permite que o contêiner se expanda dentro do flex */
-            max-width: 100%; /* Garante que não ultrapasse a largura disponível */
-        }
-        
+.video-container {
+    position: relative;
+    padding-bottom: 50%;
+    /* Mantém a proporção 16:9 */
 
-        .video-container iframe,
-        .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    flex: 1;
+    /* Permite que o contêiner se expanda dentro do flex */
+    max-width: 100%;
+    /* Garante que não ultrapasse a largura disponível */
+}
 
 
-        .form-container {
-            background-color: #cacaca;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-        }
+.video-container iframe,
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-        .form-container h2 {
-            margin-bottom: 20px;
-            font-size: 1.8em;
-            
-            color: #000000;
-        }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+.form-container {
+    background-color: #cacaca;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
 
-        .form-group input {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 12px 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            font-size: 1em;
-        }
+    color: #000000;
+}
 
-        .submit-btn {
-            background-color: #007BFF;
-            color: #fff;
-            padding: 15px 25px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
+.form-group {
+    margin-bottom: 20px;
+}
 
-        .submit-btn:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
 
-        .features,
-        .testimonials,
-        .course-outline {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
-        }
+.form-group input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1em;
+}
 
-        .features h2,
-        .testimonials h2,
-        .course-outline h2 {
-            margin-bottom: 20px;
-            font-size: 1.8em;
-            color: #333;
-            text-align: center;
-        }
+.submit-btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-        .feature-item,
-        .testimonial-item {
-            margin-bottom: 15px;
-        }
+.submit-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
 
-        .feature-item p,
-        .testimonial-item p {
-            font-size: 1em;
-            color: #555;
-        }
+.features,
+.testimonials,
+.course-outline {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
 
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: #777;
-            font-size: 0.9em;
-        }
+.features h2,
+.testimonials h2,
+.course-outline h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2em;
-            }
+.dual-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Espaçamento entre as colunas */
+}
 
-            .form-container,
-            .features,
-            .testimonials,
-            .course-outline {
-                padding: 20px;
-            }
+.testimonials,
+.course-outline {
+    flex: 1 1 calc(50% - 20px);
+    /* 50% menos o gap */
+    box-sizing: border-box;
+    /* Inclui padding e borda na largura total */
+}
 
-            .submit-btn {
-                width: 100%;
-            }
-        }
-        /* Estilo para o layout flexível */
-        .main-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center; /* Opcional: centraliza os itens */
-        }
-        
-        .video-container,
-        .header-content {
-            flex: 1 1 45%; /* Ocupa até 45% da largura disponível */
-            min-width: 300px; /* Define uma largura mínima para evitar que encolha demais */
-            box-sizing: border-box; /* Inclui padding e borda na largura total */
-            margin: 10px; /* Espaçamento entre os elementos */
-        }
-        
 
-        .header-content {
-            background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
-            border-radius: 15px;
-            color: #fff;
-            padding: 20px;
-            font-family: 'Montserrat', sans-serif; /* Fonte elegante */
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            margin: 20px;
-        }
-        
+.feature-item,
+.testimonial-item {
+    margin-bottom: 15px;
+}
 
-        /* Estilos para dispositivos móveis */
-        @media (max-width: 768px) {
-            .main-content {
-                flex-direction: column;
-            }
-            .video-container, .header-content {
-                width: 100%;
-            }
-        }
-        .highlight {
-            text-decoration: underline;
-            text-decoration-color: #FFAA00; /* Mesma cor de "CADASTRO GRATUITO" */
-        }
-        .cta-highlight {
-            color: #FFAA00; /* Cor que chama atenção */
-        }
-        
-        #cadastro-btn {
-            background: linear-gradient(45deg, #FFAA00, #FF5500); /* Meio amarelo meio laranja */
-            border: none;
-            border-radius: 25px; /* Pontas bastante arredondadas */
-            padding: 15px 30px;
-            color: #fff;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        #cadastro-btn:hover {
-            opacity: 0.8;
-        }
-        
-        .glow-effect {
-            animation: glow 1s infinite alternate;
-        }
-        
-        @keyframes glow {
-            from {
-                box-shadow: 0 0 10px #FFAA00;
-                transform: scale(1);
-            }
-            to {
-                box-shadow: 0 0 20px #FF5500;
-                transform: scale(1.05);
-            }
-        }
-        #popup-overlay.hidden {
-            display: none;
-        }
-        
-        
-        #popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(5px); /* Efeito de desfoque */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-        
-        
-        .popup-content {
-            background: hwb(0 28% 72% / 0.027); /* Fundo preto semi-transparente */
-            backdrop-filter: blur(10px); /* Efeito de desfoque */
-            padding: 30px;
-            border-radius: 15px;
-            max-width: 500px;
-            width: 90%;
-            position: relative;
-            color: #fff; /* Texto em branco para contraste */
-        }
-        
-        
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            cursor: pointer;
-            font-size: 1.5em;
-        }
-        
-        .info-text {
-            font-size: 0.8em;
-            color: #777;
-            margin-top: 10px;
-        }
-        
-        .phone-input {
-            display: flex;
-            align-items: center;
-        }
-        
-        .phone-input input[type="tel"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            font-size: 1em;
-            box-sizing: border-box; /* Adicionado para evitar estouro do container */
-        }
-        
-        #ddi {
-            width: 50px;
-            border-radius: 9px 0 0 10px;
-            flex-shrink: 0; /* Impede que o campo encolha */
-        }
-        
-        #telefone {
-            flex: 1; /* Permite que o campo ocupe o espaço restante */
-            border-left: none;
-            border-radius: 0 10px 10px 0;
-        }
-        
-        #country-flag {
-            font-size: 1.5em;
-            font-color: #000000;
-            margin-right: 10px;
-            padding: 5px 10px; /* Ajuste o padding conforme necessário */
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            background-color: #fff; /* Fundo branco para destacar */
-        }
+.feature-item p,
+.testimonial-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .form-container,
+    .features {
+        padding: 20px;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+    .dual-section {
+        flex-direction: column;
+      }
+    
+      .testimonials,
+      .course-outline {
+        flex: 1 1 100%;
+      }
+    
+}
+
+/* Estilo para o layout flexível */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* Opcional: centraliza os itens */
+}
+
+.video-container,
+.header-content {
+    flex: 1 1 45%;
+    /* Ocupa até 45% da largura disponível */
+    min-width: 300px;
+    /* Define uma largura mínima para evitar que encolha demais */
+    box-sizing: border-box;
+    /* Inclui padding e borda na largura total */
+    margin: 10px;
+    /* Espaçamento entre os elementos */
+}
+
+
+.header-content {
+    background: rgba(255, 255, 255, 0.1);
+    /* Fundo semi-transparente */
+    border-radius: 15px;
+    color: #fff;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    /* Fonte elegante */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin: 20px;
+}
+
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .video-container,
+    .header-content {
+        width: 100%;
+    }
+}
+
+.highlight {
+    text-decoration: underline;
+    text-decoration-color: #FFAA00;
+    /* Mesma cor de "CADASTRO GRATUITO" */
+}
+
+.cta-highlight {
+    color: #FFAA00;
+    /* Cor que chama atenção */
+}
+
+#cadastro-btn {
+    background: linear-gradient(45deg, #FFAA00, #FF5500);
+    /* Meio amarelo meio laranja */
+    border: none;
+    border-radius: 25px;
+    /* Pontas bastante arredondadas */
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#cadastro-btn:hover {
+    opacity: 0.8;
+}
+
+.glow-effect {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #FFAA00;
+        transform: scale(1);
+    }
+
+    to {
+        box-shadow: 0 0 20px #FF5500;
+        transform: scale(1.05);
+    }
+}
+
+#popup-overlay.hidden {
+    display: none;
+}
+
+
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    /* Efeito de desfoque */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+
+.popup-content {
+    background: hwb(0 28% 72% / 0.027);
+    /* Fundo preto semi-transparente */
+    backdrop-filter: blur(10px);
+    /* Efeito de desfoque */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    color: #fff;
+    /* Texto em branco para contraste */
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.info-text {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 10px;
+}
+
+.phone-input {
+    display: flex;
+    align-items: center;
+}
+
+.phone-input input[type="tel"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    box-sizing: border-box;
+    /* Adicionado para evitar estouro do container */
+}
+
+#ddi {
+    width: 50px;
+    border-radius: 9px 0 0 10px;
+    flex-shrink: 0;
+    /* Impede que o campo encolha */
+}
+
+#telefone {
+    flex: 1;
+    /* Permite que o campo ocupe o espaço restante */
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+}
+
+#country-flag {
+    font-size: 1.5em;
+    font-color: #000000;
+    margin-right: 10px;
+    padding: 5px 10px;
+    /* Ajuste o padding conforme necessário */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    /* Fundo branco para destacar */
+}
