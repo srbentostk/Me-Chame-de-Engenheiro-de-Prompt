@@ -1,0 +1,298 @@
+body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-image: url('sua-imagem-4k.jpg');
+            background-color: #3a3939;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px 20px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: auto;
+            width: 800px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .video-container iframe, .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .form-container {
+            background-color: #5c5a5a;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 12px 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1em;
+        }
+
+        .submit-btn {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .features,
+        .testimonials,
+        .course-outline {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .features h2,
+        .testimonials h2,
+        .course-outline h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #333;
+            text-align: center;
+        }
+
+        .feature-item,
+        .testimonial-item {
+            margin-bottom: 15px;
+        }
+
+        .feature-item p,
+        .testimonial-item p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .form-container,
+            .features,
+            .testimonials,
+            .course-outline {
+                padding: 20px;
+            }
+
+            .submit-btn {
+                width: 100%;
+            }
+        }
+        /* Estilo para o layout flexível */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .video-container, .header-content {
+            flex: 1 1 40%;
+            min-width: auto;
+        }
+
+        .header-content {
+            background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+            border-radius: 15px;
+            color: #fff;
+            padding: 20px;
+            font-family: 'Montserrat', sans-serif; /* Fonte elegante */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            margin: 20px;
+        }
+        
+
+        /* Estilos para dispositivos móveis */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .video-container, .header-content {
+                width: 100%;
+            }
+        }
+        .highlight {
+            text-decoration: underline;
+            text-decoration-color: #FFAA00; /* Mesma cor de "CADASTRO GRATUITO" */
+        }
+        .cta-highlight {
+            color: #FFAA00; /* Cor que chama atenção */
+        }
+        
+        #cadastro-btn {
+            background: linear-gradient(45deg, #FFAA00, #FF5500); /* Meio amarelo meio laranja */
+            border: none;
+            border-radius: 25px; /* Pontas bastante arredondadas */
+            padding: 15px 30px;
+            color: #fff;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #cadastro-btn:hover {
+            opacity: 0.8;
+        }
+        
+        .glow-effect {
+            animation: glow 1s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px #FFAA00;
+                transform: scale(1);
+            }
+            to {
+                box-shadow: 0 0 20px #FF5500;
+                transform: scale(1.05);
+            }
+        }
+        #popup-overlay.hidden {
+            display: none;
+        }
+        
+        
+        #popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(5px); /* Efeito de desfoque */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+        
+        
+        .popup-content {
+            background: hwb(0 28% 72% / 0.027); /* Fundo preto semi-transparente */
+            backdrop-filter: blur(10px); /* Efeito de desfoque */
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            color: #fff; /* Texto em branco para contraste */
+        }
+        
+        
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 1.5em;
+        }
+        
+        .info-text {
+            font-size: 0.8em;
+            color: #777;
+            margin-top: 10px;
+        }
+        
+        .phone-input {
+            display: flex;
+            align-items: center;
+        }
+        
+        .phone-input input[type="tel"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            box-sizing: border-box; /* Adicionado para evitar estouro do container */
+        }
+        
+        #ddi {
+            width: 50px;
+            border-radius: 9px 0 0 10px;
+            flex-shrink: 0; /* Impede que o campo encolha */
+        }
+        
+        #telefone {
+            flex: 1; /* Permite que o campo ocupe o espaço restante */
+            border-left: none;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        #country-flag {
+            font-size: 1.5em;
+            font-color: #000000;
+            margin-right: 10px;
+            padding: 5px 10px; /* Ajuste o padding conforme necessário */
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff; /* Fundo branco para destacar */
+        }
