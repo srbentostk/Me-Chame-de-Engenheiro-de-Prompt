@@ -15,8 +15,8 @@
     <div class="container">
         <div class="main-content">
             <div class="video-container">
-                <iframe id="youtube-video" src="https://www.youtube.com/embed/gxKbtvA08bY?autoplay=1&mute=1"
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                <iframe id="youtube-video" src="https://www.youtube.com/embed/gxKbtvA08bY?autoplay=1&mute=1" frameborder="0"
+                    allow="autoplay; encrypted-media" allowfullscreen>
                 </iframe>
             </div>
             <div class="header-content">
@@ -53,18 +53,17 @@
                         <div class="phone-input">
                             <span id="country-flag">🇧🇷</span>
                             <input type="tel" id="ddi" name="ddi" placeholder="+55" required>
-
+                            
                             <input type="tel" id="telefone" name="telefone" placeholder="Seu número" required>
                         </div>
                     </div>
-
+                    
                     <button type="submit" class="submit-btn">Enviar</button>
                 </form>
-                <p class="info-text">Importante: O endereço de e-mail e WhatsApp informado deve ser válido para que eu
-                    possa entrar em contato com você.</p>
+                <p class="info-text">Importante: O endereço de e-mail e WhatsApp informado deve ser válido para que eu possa entrar em contato com você.</p>
             </div>
         </div>
-
+        
     </div>
 
 
@@ -124,12 +123,73 @@
         <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
     </footer>
     </div>
+    <script>
+// Função de inicialização da API do YouTube
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    <script src="script.js"></script>
+var player;
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('youtube-video', {
+        events: {
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
 
+function onPlayerStateChange(event) {
+    if(event.data === YT.PlayerState.ENDED) {
+        document.getElementById('cadastro-btn').classList.add('glow-effect');
+    }
+}
 
+// Função para abrir o popup
+function openPopup() {
+    document.getElementById('popup-overlay').classList.remove('hidden');
+}
 
+// Evento para o botão de cadastro
+document.getElementById('cadastro-btn').addEventListener('click', openPopup);
 
+// Função para fechar o popup
+function closePopup() {
+    document.getElementById('popup-overlay').classList.add('hidden');
+}
+
+// Evento para o botão de fechar no popup
+document.querySelector('.close-btn').addEventListener('click', closePopup);
+
+// Fechar o popup ao clicar fora dele
+document.getElementById('popup-overlay').addEventListener('click', function(e) {
+    if (e.target == this) {
+        closePopup();
+    }
+});
+
+// Função para atualizar a bandeira ao alterar o DDI
+const ddiInput = document.getElementById('ddi');
+const countryFlag = document.getElementById('country-flag');
+
+const ddiToFlag = {
+    '55': '🇧🇷',
+    '1': '🇺🇸',
+    '54': '🇦🇷',
+    // Adicione outros DDIs conforme necessário
+};
+
+ddiInput.addEventListener('input', function() {
+    const ddi = this.value.replace(/\D/g, '');
+    countryFlag.textContent = ddiToFlag[ddi] || '🌐';
+});
+
+            
+            </script>
+            
+        
+    
+    
 </body>
 
 </html>
