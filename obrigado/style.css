@@ -144,6 +144,12 @@ body {
 .social-btn.twitter:hover {
     background: #0d8ddb;
 }
+.social-btn.prompts {
+    background:#bd5b00
+}
+.social-btn.prompts:hover {
+    background:#a04a00
+}
 .social-btn:hover {
     transform: scale(1.05);
     opacity: 0.9;
