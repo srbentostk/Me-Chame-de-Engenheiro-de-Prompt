@@ -40,35 +40,45 @@
                 <!-- Conteúdo do formulário de cadastro -->
                 <h2>Faça seu Cadastro</h2>
                 <!-- Formulário atualizado -->
-                <form
-                    action="https://online.us17.list-manage.com/subscribe/post?u=ae83cf824b5730aeeefb16858&amp;id=267a403300&amp;f_id=00d94de2f0"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"
-                    novalidate>
-                    
+                <form klicksend-form-id='eYuR0by' autocomplete='off' method="post"
+                    action="//handler.send.hotmart.com/subscription/eYuR0by" target="_blank">
                     <!-- Campos do formulário -->
                     <div class="form-group">
-                        <label for="nome">Nome Completo</label>
-                        <input type="text" id="nome" name="FNAME" required>
+                        <label for="first_name">Nome Completo</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="Seu nome" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" name="EMAIL" required>
+                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
                     </div>
                     <div class="form-group">
-                        <label for="telefone">WhatsApp com DDI</label>
-                        <div class="phone-input">
-                            <span id="country-flag">🇧🇷</span>
-                            <input type="tel" id="ddi" name="DDI" placeholder="+55" required>
-                            <input type="tel" id="telefone" name="PHONE" placeholder="Seu número" required>
-                        </div>
+                        <label for="phone">WhatsApp com DDI</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+55 (XX) XXXXX-XXXX" required>
+                    </div>
+                    <!-- Texto GDPR -->
+                    <div klicksend-gdpr-text
+                        style="font-size: 12px; color: #86919a; margin-bottom: 10px; text-align: left;">
+                        <p>Esses dados serão utilizados para entrarmos em contato com você e disponibilizarmos mais
+                            conteúdos e ofertas. Caso você não queira mais receber os nossos emails, cada email que você
+                            receber incluirá ao final um link que poderá ser usado para remover o seu email da nossa
+                            lista de distribuição.</p>
+                        <p>Para mais informações, acesse: <a
+                                href="https://hotmart.com/pt-br/legal/privacidade-de-dados/" target="_blank"
+                                rel="noopener">Política de Privacidade</a></p>
+                    </div>
+                    <!-- Checkbox GDPR -->
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <input type="checkbox" name="gdpr" id="gdpr" value="Concordo em receber os e-mails" required
+                            style="margin-right: 10px;">
+                        <label for="gdpr">Concordo em receber os e-mails</label>
                     </div>
                     <!-- Campo oculto para evitar bots -->
                     <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                        <input type="text" name="b_ae83cf824b5730aeeefb16858_267a403300" tabindex="-1" value="">
+                        <input type="text" name="b_eYuR0by" tabindex="-1" value="">
                     </div>
-                    <input type="hidden" name="redirect" value="https://mechamedebento.cloud/obrigado/obrigado.html">
                     <button type="submit" class="submit-btn">Enviar</button>
                 </form>
+
 
                 <p class="info-text">Importante: O endereço de e-mail e WhatsApp informado deve ser válido para que eu
                     possa entrar em contato com você.</p>
@@ -226,12 +236,12 @@
     </div>
     <script src="script.js"></script>
     <script>
-document.getElementById('mc-embedded-subscribe-form').addEventListener('submit', function(e) {
-    var ddi = document.getElementById('ddi').value;
-    var telefone = document.getElementById('telefone').value;
-    document.getElementById('telefone').value = ddi + telefone;
-});
-</script>
+        document.getElementById('mc-embedded-subscribe-form').addEventListener('submit', function (e) {
+            var ddi = document.getElementById('ddi').value;
+            var telefone = document.getElementById('telefone').value;
+            document.getElementById('telefone').value = ddi + telefone;
+        });
+    </script>
 
 
 
