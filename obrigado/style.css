@@ -96,6 +96,7 @@ body {
     border-radius: 8px;
     font-size: 1em;
     transition: background 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto */
 }
 
 .social-btn i {
@@ -142,6 +143,10 @@ body {
 
 .social-btn.twitter:hover {
     background: #0d8ddb;
+}
+.social-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 /* Responsividade */
