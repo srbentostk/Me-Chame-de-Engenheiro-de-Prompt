@@ -1,0 +1,164 @@
+/* Fonte Roboto */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fundo com degradê e desfoque */
+.background {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000, #434343);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Efeito de desfoque */
+.background::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent);
+    filter: blur(100px);
+    z-index: 1;
+}
+
+/* Popup centralizado */
+.popup {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-in-out;
+    max-width: 600px;
+    margin: 20px;
+}
+
+/* Animação de fade */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Ícone de confirmação */
+.confirmation-icon {
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Títulos e textos */
+.popup h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.popup p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.popup h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Botões de redes sociais */
+.social-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.social-btn i {
+    margin-right: 8px;
+    font-size: 1.5em;
+}
+
+/* Estilos específicos para cada rede social */
+.social-btn.youtube {
+    background: #FF0000;
+}
+
+.social-btn.youtube:hover {
+    background: #cc0000;
+}
+
+.social-btn.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.social-btn.instagram:hover {
+    opacity: 0.8;
+}
+
+.social-btn.tiktok {
+    background: #010101;
+}
+
+.social-btn.tiktok:hover {
+    background: #0f0f0f;
+}
+
+.social-btn.threads {
+    background: #000000;
+}
+
+.social-btn.threads:hover {
+    background: #1a1a1a;
+}
+
+.social-btn.twitter {
+    background: #1DA1F2;
+}
+
+.social-btn.twitter:hover {
+    background: #0d8ddb;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .popup h1 {
+        font-size: 1.5em;
+    }
+
+    .popup p {
+        font-size: 1em;
+    }
+
+    .popup h2 {
+        font-size: 1.2em;
+    }
+
+    .social-btn {
+        font-size: 0.9em;
+    }
+}
