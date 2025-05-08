@@ -1,251 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Prompt Dominado</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mentoria IA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .hero {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .video-container {
+      flex: 2;
+      min-width: 300px;
+    }
+    .video-container video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .form-container {
+      flex: 1;
+      min-width: 250px;
+    }
+    .form-container label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-container input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .form-container button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background: #0056b3;
+    }
+    .mentoria {
+      margin-top: 40px;
+    }
+    .mentoria h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    .mentoria ol {
+      padding-left: 20px;
+    }
+    .mentoria ol li {
+      margin-bottom: 10px;
+    }
+    @media (max-width: 600px) {
+      .hero {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="main-content">
-            <div class="video-container">
-                <iframe id="youtube-video"
-                    src="https://www.youtube.com/embed/eGRSkXewZJY?autoplay=1&mute=1&controls=1&modestbranding=1&rel=0&fs=0&cc_load_policy=0&iv_load_policy=3"
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-                </iframe>
-
-            </div>
-            <div class="header-content">
-                <header>
-                    <h1>Projeto Prompt Dominado</h1>
-                    <p>Um computador com acesso ao ChatGPT</p>
-                    <p>É tudo que você <span class="highlight">precisa para aprender</span></p>
-                    <p>como transformar seu chatGPT em uma:</p>
-                    <h3>MÁQUINA DE PRODUTIVIDADE</h3>
-                    <p>Clique no botão abaixo e faça seu <span class="cta-highlight">CADASTRO GRATUITO</span></p>
-                    <button id="cadastro-btn">QUERO ME CADASTRAR</button>
-
-                </header>
-            </div>
-        </div>
-        <div id="popup-overlay" class="hidden">
-            <div class="popup-content">
-                <span class="close-btn">&times;</span>
-                <!-- Conteúdo do formulário de cadastro -->
-                <h2>Faça seu Cadastro</h2>
-                <!-- Formulário atualizado -->
-                <form klicksend-form-id='eYuR0by' autocomplete='off' method="post"
-                    action="//handler.send.hotmart.com/subscription/eYuR0by" target="_blank">
-                    <!-- Campos do formulário -->
-                    <div class="form-group">
-                        <label for="first_name">Nome Completo</label>
-                        <input type="text" id="first_name" name="first_name" placeholder="Seu nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">WhatsApp com DDI</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+55 (XX) XXXXX-XXXX" required>
-                    </div>
-                    <!-- Texto GDPR -->
-                    <div klicksend-gdpr-text
-                        style="font-size: 12px; color: #86919a; margin-bottom: 10px; text-align: left;">
-                        <p>Esses dados serão utilizados para entrarmos em contato com você e disponibilizarmos mais
-                            conteúdos e ofertas. Caso você não queira mais receber os nossos emails, cada email que você
-                            receber incluirá ao final um link que poderá ser usado para remover o seu email da nossa
-                            lista de distribuição.</p>
-                        <p>Para mais informações, acesse: <a
-                                href="https://hotmart.com/pt-br/legal/privacidade-de-dados/" target="_blank"
-                                rel="noopener">Política de Privacidade</a></p>
-                    </div>
-                    <!-- Checkbox GDPR -->
-                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
-                        <input type="checkbox" name="gdpr" id="gdpr" value="Concordo em receber os e-mails" required
-                            style="margin-right: 10px;">
-                        <label for="gdpr">Concordo em receber os e-mails</label>
-                    </div>
-                    <!-- Campo oculto para evitar bots -->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                        <input type="text" name="b_eYuR0by" tabindex="-1" value="">
-                    </div>
-                    <button type="submit" class="submit-btn">Enviar</button>
-                </form>
-
-
-                <p class="info-text">Importante: O endereço de e-mail e WhatsApp informado deve ser válido para que eu
-                    possa entrar em contato com você.</p>
-            </div>
-        </div>
-
+  <div class="container">
+    <div class="hero">
+      <div class="video-container">
+        <video controls>
+          <source src="video.mp4" type="video/mp4">
+          Seu navegador não suporta este vídeo.
+        </video>
+      </div>
+      <div class="form-container">
+        <form action="#" method="post">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+          
+          <label for="whatsapp">Whatsapp</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="(99) 99999-9999" required>
+          
+          <button type="submit">Entrar na lista</button>
+        </form>
+      </div>
     </div>
 
-
-    <div class="container">
-        <div class="features">
-            <h2>O Que Você Vai Aprender</h2>
-            <div class="feature-item">
-                <p><strong>Módulo 1:</strong> Introdução ao ChatGPT e Prompt Engineering</p>
-            </div>
-            <div class="feature-item">
-                <p><strong>Módulo 2:</strong> Estruturação de Prompts Eficazes</p>
-            </div>
-            <div class="feature-item">
-                <p><strong>Módulo 3:</strong> Técnicas Avançadas de Prompt Engineering</p>
-            </div>
-            <div class="feature-item">
-                <p><strong>Módulo 4:</strong> Aplicações Práticas por Setor</p>
-            </div>
-            <div class="feature-item">
-                <p><strong>Módulo 5:</strong> Avaliação e Melhoria Contínua</p>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="dual-section">
-            <div class="testimonials">
-                <h2>Já Cometeu Esses Erros?</h2>
-
-
-                <div class="testimonial-item">
-                    <p>❌ Fazer código sem engenharia de prompt, e perder mais tempo corrigindo bug que escrevendo
-                        código.</p>
-                </div>
-
-                <div class="testimonial-item">
-                    <p>❌ Gerar códigos com bibliotecas que não existem, ou código defasado com parâmetros que não
-                        existem.</p>
-                </div>
-
-                <div class="testimonial-item">
-                    <p>❌ Pedir pro chat escrever um texto e obter um resultado cheio de delírios e informações falsas.
-                    </p>
-                </div>
-
-                <div class="testimonial-item">
-                    <p>❌ Escrever um e-mail, mas a mensagem ficar robotizada demais, ou simplesmente não parecer seu
-                        jeito de escrever.</p>
-                </div>
-
-                <div class="testimonial-item">
-                    <p>❌ Não estruturar corretamente o contexto, levando a respostas confusas.</p>
-                </div>
-
-                <div class="testimonial-item">
-                    <p>❌ Não fornecer exemplos ou dados específicos, resultando em respostas genéricas que não atendem
-                        às necessidades.</p>
-                </div>
-
-                <div class="testimonial-item">
-                    <p>❌ Ignorar as limitações do modelo, esperando respostas perfeitas em áreas complexas ou muito
-                        técnicas sem verificar a precisão.</p>
-                </div>
-
-                <div class="testimonial-item">
-                    <p>❌ Tentar obter informações sobre eventos ou dados pós-2021, levando a respostas desatualizadas ou
-                        incorretas.</p>
-                </div>
-
-                <div class="testimonial-item">
-                    <p>❌ Não revisar ou editar o conteúdo gerado, confiando cegamente sem validar fatos ou adaptar ao
-                        contexto específico.</p>
-                </div>
-
-
-                <div class="testimonial-item">
-                    <p>❌ Fazer múltiplas perguntas em um único prompt sem organização, resultando em respostas
-                        incompletas ou que abordam apenas parte das questões.</p>
-                </div>
-
-                <div class="testimonial-item">
-                    <p>❌ Esquecer de definir o idioma ou o estilo desejado, obtendo respostas em um formato ou linguagem
-                        indesejada.</p>
-                </div>
-
-                <div class="testimonial-item">
-                    <p>❌ Ignorar instruções fornecidas anteriormente, sem referenciar ou contextualizar para manter a
-                        coerência na conversa.</p>
-                </div>
-
-                <div class="testimonial-item">
-                    <p>❌ Não utilizar sequências de contexto ao continuar um tópico, levando o modelo a perder o fio da
-                        conversa.</p>
-                </div>
-
-
-
-                <p>Se você se identificou com algum desses erros, junte-se à nossa lista de espera e descubra como
-                    corrigir
-                    esses problemas!</p>
-            </div>
-
-            <div class="course-outline">
-                <h2>Benefícios para Pessoas e Pequenos Negócios</h2>
-                <p>Aprender Prompt Engineering te ajuda a aumentar a eficiência e a produtividade, obtendo um resultado
-                    como
-                    você deseja, sem delírios, sem alucinações, e realmente funcional.</p>
-                <p>Este curso também é ideal para pequenos e médios empreendedores que desejam aumentar o lucro sem a
-                    necessidade de contratar mais
-                    funcionários. Aprende a:</p>
-                <ul>
-                    <li>Gerar códigos sem alucinações, com poucas chances de bugs.</li>
-                    <li>Reduzir significativamente o tempo de correção e refatoração de códigos.</li>
-                    <li>Escrever e-mails corretos e com um tom parecido com o seu tom natural.</li>
-                    <li>Fazer pesquisa do modo mais eficaz possível, reduzindo o tempo gasto para encontrar o resultado
-                        que
-                        precisa.</li>
-                    <li>Criar ferramentas que você nunca imaginou ser possível antes.</li>
-                    <li>Criar um professor disponível 24/7 para te ensinar basicamente qualquer coisa.</li>
-                    <li>Criar um assistente para te ajudar em qualquer tarefa com respostas de qualidade.</li>
-                    <li>Aumentar a eficiência e produtividade dos seus funcionários.</li>
-                    <li>Diminuir a perda de clientes por demora na resposta, ou resposta com má qualidade.</li>
-                    <li>Qualificar e capacitar seus funcionários para produzir mais em menos tempo.</li>
-                    <li>Automatizar tarefas repetitivas, economizando tempo e esforço.</li>
-                    <li>Melhorar a comunicação com clientes através de respostas mais eficazes.</li>
-                </ul>
-                <p>Usos comuns que iremos abordar:</p>
-                <ul>
-                    <li>Geração de Ideias e Brainstorming</li>
-                    <li>Redação de Textos e Artigos</li>
-                    <li>Apoio em Programação e Debugging</li>
-                    <li>Tradução e Parafraseamento</li>
-                    <li>Criação de Roteiros e Scripts</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="form-container">
-            <h2>Entre em Contato Conosco</h2>
-            <p>Ao se inscrever, você fará parte da lista de espera e será contatado nas próximas semanas para
-                conversarmos
-                sobre suas necessidades e como podemos ajudar a resolver suas dores. Prometemos que valerá a pena!</p>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <p>&copy; 2024 Me Chame de Bento. Todos os direitos reservados.</p>
-    </footer>
-    </div>
-    <script src="script.js"></script>
-    <script>
-        document.getElementById('mc-embedded-subscribe-form').addEventListener('submit', function (e) {
-            var ddi = document.getElementById('ddi').value;
-            var telefone = document.getElementById('telefone').value;
-            document.getElementById('telefone').value = ddi + telefone;
-        });
-    </script>
-
-
-
-
+    <section class="mentoria">
+      <h2>Mentoria</h2>
+      <ol>
+        <li>Desenvolvo contigo um plano para te ajudar com os seus problemas</li>
+        <li>Desenvolvo algumas automações para ajudar no seu negócio.</li>
+        <li>Te ensino a tirar o melhor proveito possível da IA</li>
+        <li>Explico detalhadamente para você, basta entrar na lista de interessados</li>
+      </ol>
+    </section>
+  </div>
 </body>
-
 </html>
